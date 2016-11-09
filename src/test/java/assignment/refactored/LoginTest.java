@@ -52,13 +52,4 @@ public class LoginTest extends AbstractTestBase {
 		Assertions.assertThat(loginPage.getErrorMessage()).isEqualTo("Invalid email address.");
 	}
 
-	/**
-	 * Extra:
-	 * 
-	 * Move duplicated behaviors to separated before method
-	 * 
-	 * 
-	 * Class now extends from AbstractTestBase
-	 */
-
 }

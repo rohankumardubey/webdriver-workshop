@@ -17,7 +17,7 @@ public class LoginTest {
 	@BeforeClass
 	public void setup() {
 		// System.setProperty("webdriver.gecko.driver", "src/test/resources/geckodriver");
-		System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver");
+		System.setProperty("webdriver.chrome.driver", "src/test/resources/mac/chromedriver");
 		driver = new ChromeDriver();
 		driver.get("http://www.demo.rdekleijn.nl");
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
