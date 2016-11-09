@@ -7,7 +7,7 @@ import example.pages.HomePage;
 
 public class WithPageObjectModelTest extends AbstractTestBase {
 
-	@Test
+	@Test(invocationCount = 15, threadPoolSize = 5)
 	public void login() {
 		final HomePage homepage = new HomePage(driver).get();
 		homepage.navigateToLoginPage() //

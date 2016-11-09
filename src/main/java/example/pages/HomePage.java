@@ -9,6 +9,9 @@ public class HomePage extends PageBase<HomePage> {
 	@FindBy(css = ".login")
 	private WebElement loginLink;
 
+	@FindBy(css = "#contact-link > a")
+	private WebElement contactLink;
+
 	@FindBy(css = "p.info-account")
 	private WebElement message;
 
@@ -18,7 +21,7 @@ public class HomePage extends PageBase<HomePage> {
 
 	@Override
 	protected void load() {
-		driver.get("http://demo.technisch-testen.nl");
+		driver.get("http://www.demo.rdekleijn.nl");
 	}
 
 	@Override
@@ -26,9 +29,14 @@ public class HomePage extends PageBase<HomePage> {
 
 	}
 
-	public LoginPage navigateToLoginPage() {
+	public AuthenticationPage navigateToLoginPage() {
 		loginLink.click();
-		return new LoginPage(driver);
+		return new AuthenticationPage(driver);
+	}
+
+	public ContactPage navigateToContactPage() {
+		contactLink.click();
+		return new ContactPage(driver);
 	}
 
 	public String getMessage() {

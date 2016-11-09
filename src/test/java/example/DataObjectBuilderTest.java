@@ -63,4 +63,9 @@ public class DataObjectBuilderTest extends AbstractTestBase {
 
 		System.out.println(order.getShippingAddress().getCountry());
 	}
+
+	@Test
+	public void testData() {
+		new Address.AddressBuilder("streetname", "1234nw").build();
+	}
 }

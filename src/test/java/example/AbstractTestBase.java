@@ -12,7 +12,8 @@ import org.testng.annotations.Listeners;
 
 /**
  * This abstract class takes care of the browser startup and teardown
- *
+ * 
+ * Abstract classes cannot be instantiated, but they can be subclassed.
  */
 @Listeners({ ScreenshotListener.class })
 public abstract class AbstractTestBase {
@@ -20,7 +21,8 @@ public abstract class AbstractTestBase {
 
 	@BeforeClass
 	public void setup() throws Exception {
-		// driver = new FirefoxDriver();
+		// System.setProperty("webdriver.gecko.driver", "/Users/roydekleijn/Downloads/geckodriver-0.8.0-OSX");
+		// driver = new MarionetteDriver();
 		// driver.get("http://www.demo.technisch-testen.nl");
 
 		final DesiredCapabilities dr = DesiredCapabilities.firefox();
